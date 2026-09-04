@@ -1,0 +1,9 @@
+dataset,model,n_samples,accuracy_pct,rms_calib_error_pct
+cifar10,wrn28-10,10000,96.65,1.95
+cifar10,wrn40-4,10000,96.0,2.33
+cifar10,resnext-29,10000,96.15,2.06
+cifar10,resnet-18,10000,95.77,2.48
+cifar100,wrn28-10,10000,82.58,6.5
+cifar100,wrn40-4,10000,80.59,2.95
+cifar100,resnext-29,10000,81.67,3.72
+cifar100,resnet-18,10000,78.34,6.18

@@ -345,6 +345,14 @@ class PGD(nn.Module):
 
         return adv_bx * 2 - 1
 
+# Fix dataloader worker issue
+# https://github.com/pytorch/pytorch/issues/5059
+def wif(id):
+    uint64_seed = torch.initial_seed()
+    ss = np.random.SeedSequence([uint64_seed])
+    # More than 128 bits (4 32-bit words) would be overkill.
+    np.random.seed(ss.generate_state(4))
+
 
 def main():
     torch.manual_seed(1)
@@ -387,14 +395,6 @@ def main():
     print('aug_size', len(mixing_set))
 
     train_data = IPMixDataset(train_data, mixing_set, preprocess,args.no_jsd)
-
-    # Fix dataloader worker issue
-    # https://github.com/pytorch/pytorch/issues/5059
-    def wif(id):
-        uint64_seed = torch.initial_seed()
-        ss = np.random.SeedSequence([uint64_seed])
-        # More than 128 bits (4 32-bit words) would be overkill.
-        np.random.seed(ss.generate_state(4))
 
     train_loader = torch.utils.data.DataLoader(
         train_data,

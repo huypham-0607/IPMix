@@ -1,0 +1,2 @@
+dataset,model,n_samples,accuracy_pct,rms_calib_error_pct
+cifar10,wrn40-4,10000,96.0,2.33
