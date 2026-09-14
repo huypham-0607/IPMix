@@ -12,6 +12,7 @@ from calibration_tools import calib_err
 from models.WideResNet_pytorch.wideresnet import WideResNet
 from models.ResNeXt_DenseNet.models.resnext import resnext29
 from models.ResNet.resnet import resnet18
+from models.ResNet.resnet_cifar import BasicBlock as CifarBasicBlock, ResNet as CifarResNet
 
 PRETRAINED_DIR = "./pretrained/cifar"
 
@@ -91,6 +92,13 @@ def loader(dataset: str) -> DataLoader:
     return test_loader
 
 
+class OptionABasicBlock(CifarBasicBlock):
+    # The resnet-20 checkpoints have no shortcut weights, i.e. they were
+    # trained with the parameter-free option 'A' shortcut, not the 'B' default.
+    def __init__(self, in_planes, planes, stride=1):
+        super().__init__(in_planes, planes, stride, option="A")
+
+
 def build_architecture(model: str, num_classes: int) -> torch.nn.Module:
     if model in WRN_CONFIGS:
         cfg = WRN_CONFIGS[model]
@@ -103,8 +111,10 @@ def build_architecture(model: str, num_classes: int) -> torch.nn.Module:
         # was trained with a 100-way head. Match that shape or state_dict
         # loading will fail on the fc layer.
         return resnet18(num_classes=100)
-    raise ValueError(f"Unknown model '{model}'. Expected one of "
-                      f"{sorted([*WRN_CONFIGS, 'resnext-29', 'resnet-18'])}")
+    if model == "resnet-20":
+        # resnet20() hard-codes 10 classes, so build ResNet directly for CIFAR-100.
+        return CifarResNet(OptionABasicBlock, [3, 3, 3], num_classes=num_classes)
+    raise ValueError(f"Unknown model '{model}'. Expected one of {model_choices}")
 
 
 def load_model(dataset: str, model: str, device: str = "cuda") -> torch.nn.Module:
@@ -132,7 +142,7 @@ def load_model(dataset: str, model: str, device: str = "cuda") -> torch.nn.Modul
     return net
 
 dataset_choices = ["cifar10", "cifar100"]
-model_choices = [*WRN_CONFIGS, "resnext-29", "resnet-18"]
+model_choices = [*WRN_CONFIGS, "resnext-29", "resnet-18", "resnet-20"]
 
 CSV_FIELDS = ["dataset", "model", "n_samples", "accuracy_pct", "rms_calib_error_pct"]
 

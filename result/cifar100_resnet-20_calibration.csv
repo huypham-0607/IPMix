@@ -1,0 +1,2 @@
+dataset,model,n_samples,accuracy_pct,rms_calib_error_pct
+cifar100,resnet-20,10000,69.12,5.92
