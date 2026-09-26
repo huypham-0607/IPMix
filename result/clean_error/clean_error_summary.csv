@@ -1,0 +1,11 @@
+dataset,model,n_samples,accuracy_pct,clean_error_pct
+cifar10,wrn28-10,10000,96.65,3.35
+cifar10,wrn40-4,10000,96.00,4.00
+cifar10,resnext-29,10000,96.15,3.85
+cifar10,resnet-18,10000,95.77,4.23
+cifar10,resnet-20,10000,91.94,8.06
+cifar100,wrn28-10,10000,82.58,17.42
+cifar100,wrn40-4,10000,80.59,19.41
+cifar100,resnext-29,10000,81.67,18.33
+cifar100,resnet-18,10000,78.34,21.66
+cifar100,resnet-20,10000,69.12,30.88
