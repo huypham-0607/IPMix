@@ -1,0 +1,107 @@
+==========================================================
+Evaluating: wrn on cifar10 (./pretrained/cifar10/wrn40-4.pth.tar)
+==========================================================
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./fractal_data', model='wrn', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar10/wrn40-4.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 99
+Clean
+	Test Loss 0.127 | Test Error 4.00
+Adversarial
+	Test Loss 3.914 | Test Error 74.42
+
+==========================================================
+Evaluating: wrn on cifar10 (./pretrained/cifar10/wrn28-10.pth.tar)
+==========================================================
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./fractal_data', model='wrn', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=28, widen_factor=10, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar10/wrn28-10.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 100
+Clean
+	Test Loss 0.104 | Test Error 3.35
+Adversarial
+	Test Loss 5.023 | Test Error 76.43
+
+==========================================================
+Evaluating: resnet on cifar10 (./pretrained/cifar10/resnet-18.pth.tar)
+==========================================================
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./fractal_data', model='resnet', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar10/resnet-18.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 198
+Clean
+	Test Loss 0.129 | Test Error 4.23
+Adversarial
+	Test Loss 5.729 | Test Error 80.66
+
+==========================================================
+Evaluating: resnext on cifar10 (./pretrained/cifar10/resnext-29.pth.tar)
+==========================================================
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./fractal_data', model='resnext', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar10/resnext-29.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 191
+Clean
+	Test Loss 0.120 | Test Error 3.85
+
+==========================================================
+Evaluating: wrn on cifar100 (./pretrained/cifar100/wrn40-4.pth.tar)
+==========================================================
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./fractal_data', model='wrn', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar100/wrn40-4.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 100
+Clean
+	Test Loss 0.667 | Test Error 19.41
+Adversarial
+	Test Loss 7.405 | Test Error 89.37
+
+==========================================================
+Evaluating: wrn on cifar100 (./pretrained/cifar100/wrn28-10.pth.tar)
+==========================================================
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./fractal_data', model='wrn', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=28, widen_factor=10, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar100/wrn28-10.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 100
+Clean
+	Test Loss 0.628 | Test Error 17.42
+Adversarial
+	Test Loss 11.191 | Test Error 91.65
+
+==========================================================
+Evaluating: resnet on cifar100 (./pretrained/cifar100/resnet-18.pth.tar)
+==========================================================
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./fractal_data', model='resnet', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar100/resnet-18.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 197
+Clean
+	Test Loss 0.790 | Test Error 21.66
+Adversarial
+	Test Loss 13.859 | Test Error 95.08
+
+==========================================================
+Evaluating: resnext on cifar100 (./pretrained/cifar100/resnext-29.pth.tar)
+==========================================================
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./fractal_data', model='resnext', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./pretrained/cifar100/resnext-29.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 197
+Clean
+	Test Loss 0.649 | Test Error 18.33
