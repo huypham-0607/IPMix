@@ -1,0 +1,27 @@
+==========================================================
+1. EVALUATING CIFAR-10 (ResNet-20 200-Epoch Checkpoint)
+==========================================================
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./fractal_data', model='resnet20', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./results/c10_resnet20_200ep.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 193
+Clean
+	Test Loss 0.241 | Test Error 8.06
+Adversarial
+	Test Loss 5.423 | Test Error 86.24
+
+==========================================================
+2. EVALUATING CIFAR-100 (ResNet-20 200-Epoch Checkpoint)
+==========================================================
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./fractal_data', model='resnet20', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./result', resume='./results/c100_resnet20_200ep.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+Files already downloaded and verified
+Files already downloaded and verified
+train_size 50000
+aug_size 1000
+Model restored from epoch: 194
+Clean
+	Test Loss 1.107 | Test Error 30.88
+Adversarial
+	Test Loss 7.959 | Test Error 96.02
