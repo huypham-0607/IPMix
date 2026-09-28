@@ -1,0 +1,8 @@
+data/
+pretrained/
+results/
+*.pth.tar
+smoke*/
+eval_*/
+verify/
+__pycache__/

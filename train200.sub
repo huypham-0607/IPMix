@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH -A zghodsi
+#SBATCH -p a30
+#SBATCH --gpus-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH -t 08:00:00
+#SBATCH --job-name=ipmix_r20_200
+#SBATCH -o logs/%x_%j.out
+
+module load anaconda/2024.10-py312
+conda activate $RCAC_SCRATCH/envs/ipmix
+cd $RCAC_SCRATCH/ipmix/IPMix
+
+python cifar.py \
+  --dataset $DATASET \
+  --data-path ./data \
+  --mixing-set ./data/mixing_set/IPMix-set \
+  --model resnet20 \
+  --epochs 200 \
+  --decay 0.0001 \
+  --learning-rate $LR \
+  --save ./results/${DATASET}_resnet20_200ep

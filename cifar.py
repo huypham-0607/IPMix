@@ -12,6 +12,7 @@ from models.ResNeXt_DenseNet.models.densenet import densenet
 from models.ResNeXt_DenseNet.models.resnext import resnext29
 from models.WideResNet_pytorch.wideresnet import WideResNet
 from models.ResNet.resnet import resnet18
+from models.ResNet.resnet20 import resnet20
 
 import torch
 import torch.nn as nn
@@ -45,7 +46,7 @@ parser.add_argument(
     '-m',
     type=str,
     default='wrn',
-    choices=['wrn', 'resnext', 'resnet','densenet'],
+    choices=['wrn', 'resnext', 'resnet','densenet','resnet20'],
     help='Choose architecture from wrn, resnext, resnet')
 
 # training set
@@ -420,6 +421,8 @@ def main():
         net = resnext29(num_classes=num_classes)
     elif args.model == 'resnet':
         net = resnet18(num_classes=num_classes)
+    elif args.model == 'resnet20':
+        net = resnet20(num_classes=num_classes)
 
     optimizer = torch.optim.SGD(
         net.parameters(),
@@ -439,7 +442,7 @@ def main():
 
     if args.resume:
         if os.path.isfile(args.resume):
-            checkpoint = torch.load(args.resume)
+            checkpoint = torch.load(args.resume, weights_only=False)
             start_epoch = checkpoint['epoch'] + 1
             best_acc = checkpoint['best_acc']
             net.load_state_dict(checkpoint['state_dict'])

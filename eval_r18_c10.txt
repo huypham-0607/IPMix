@@ -1,0 +1,24 @@
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./data/mixing_set/IPMix-set', model='resnet', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./eval_r18_c10', resume='./pretrained/c10_resnet18.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+train_size 50000
+aug_size 13032
+Model restored from epoch: 198
+Clean
+	Test Loss 0.129 | Test Error 4.23
+Adversarial
+	Test Loss 5.730 | Test Error 80.67
+gaussian_noise	Test Loss 0.308 | Test Error 9.498
+shot_noise	Test Loss 0.257 | Test Error 8.112
+impulse_noise	Test Loss 0.277 | Test Error 8.696
+defocus_blur	Test Loss 0.177 | Test Error 5.796
+glass_blur	Test Loss 0.467 | Test Error 14.252
+motion_blur	Test Loss 0.252 | Test Error 8.076
+zoom_blur	Test Loss 0.224 | Test Error 7.116
+snow	Test Loss 0.252 | Test Error 7.998
+frost	Test Loss 0.216 | Test Error 6.896
+fog	Test Loss 0.207 | Test Error 6.522
+brightness	Test Loss 0.146 | Test Error 4.832
+contrast	Test Loss 0.168 | Test Error 5.380
+elastic_transform	Test Loss 0.299 | Test Error 9.372
+pixelate	Test Loss 0.478 | Test Error 12.666
+jpeg_compression	Test Loss 0.341 | Test Error 10.932
+Mean Corruption Error: 8.410

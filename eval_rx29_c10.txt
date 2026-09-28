@@ -1,0 +1,24 @@
+Namespace(dataset='cifar10', data_path='./data', mixing_set='./data/mixing_set/IPMix-set', model='resnext', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=200, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./eval_rx29_c10', resume='./pretrained/c10_resnext29.pth.tar', evaluate=True, print_freq=50, num_workers=4)
+train_size 50000
+aug_size 13032
+Model restored from epoch: 191
+Clean
+	Test Loss 0.120 | Test Error 3.85
+Adversarial
+	Test Loss 9.675 | Test Error 93.12
+gaussian_noise	Test Loss 0.321 | Test Error 10.104
+shot_noise	Test Loss 0.259 | Test Error 8.262
+impulse_noise	Test Loss 0.269 | Test Error 8.368
+defocus_blur	Test Loss 0.164 | Test Error 5.462
+glass_blur	Test Loss 0.509 | Test Error 16.266
+motion_blur	Test Loss 0.247 | Test Error 8.296
+zoom_blur	Test Loss 0.200 | Test Error 6.764
+snow	Test Loss 0.246 | Test Error 8.132
+frost	Test Loss 0.215 | Test Error 7.106
+fog	Test Loss 0.197 | Test Error 6.364
+brightness	Test Loss 0.138 | Test Error 4.668
+contrast	Test Loss 0.152 | Test Error 5.078
+elastic_transform	Test Loss 0.301 | Test Error 10.002
+pixelate	Test Loss 0.673 | Test Error 17.620
+jpeg_compression	Test Loss 0.327 | Test Error 10.756
+Mean Corruption Error: 8.883

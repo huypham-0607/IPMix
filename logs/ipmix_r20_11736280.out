@@ -1,0 +1,123 @@
+Namespace(dataset='cifar100', data_path='./data', mixing_set='./data/mixing_set/IPMix-set', model='resnet20', epochs=100, learning_rate=0.1, batch_size=128, eval_batch_size=1000, momentum=0.9, decay=0.0005, layers=40, widen_factor=4, droprate=0.3, k=3, t=3, no_jsd=False, beta=3, aug_severity=3, save='./results/cifar100_resnet20_ipmix', resume='', evaluate=False, print_freq=50, num_workers=4)
+train_size 50000
+aug_size 13032
+Beginning training from epoch: 1
+Epoch   1 | Time   145 | Train Loss 3.7550 | Test Loss 3.496 | Test Error 82.52
+Epoch   2 | Time    96 | Train Loss 3.5041 | Test Loss 3.192 | Test Error 77.41
+Epoch   3 | Time    97 | Train Loss 3.2412 | Test Loss 2.993 | Test Error 75.16
+Epoch   4 | Time    96 | Train Loss 3.0756 | Test Loss 2.938 | Test Error 72.83
+Epoch   5 | Time    98 | Train Loss 2.9246 | Test Loss 2.668 | Test Error 68.29
+Epoch   6 | Time    97 | Train Loss 2.8548 | Test Loss 2.488 | Test Error 64.21
+Epoch   7 | Time    96 | Train Loss 2.7947 | Test Loss 2.463 | Test Error 63.83
+Epoch   8 | Time    96 | Train Loss 2.7639 | Test Loss 2.400 | Test Error 61.88
+Epoch   9 | Time    96 | Train Loss 2.6863 | Test Loss 2.335 | Test Error 60.39
+Epoch  10 | Time    99 | Train Loss 2.6238 | Test Loss 2.226 | Test Error 57.54
+Epoch  11 | Time    98 | Train Loss 2.5782 | Test Loss 2.202 | Test Error 58.38
+Epoch  12 | Time    98 | Train Loss 2.6254 | Test Loss 2.264 | Test Error 59.02
+Epoch  13 | Time    99 | Train Loss 2.5731 | Test Loss 2.139 | Test Error 56.45
+Epoch  14 | Time    99 | Train Loss 2.5993 | Test Loss 2.224 | Test Error 57.72
+Epoch  15 | Time    98 | Train Loss 2.5161 | Test Loss 2.159 | Test Error 56.51
+Epoch  16 | Time    96 | Train Loss 2.5434 | Test Loss 2.182 | Test Error 57.45
+Epoch  17 | Time    98 | Train Loss 2.4802 | Test Loss 2.087 | Test Error 55.24
+Epoch  18 | Time    96 | Train Loss 2.4809 | Test Loss 2.073 | Test Error 54.59
+Epoch  19 | Time    96 | Train Loss 2.4568 | Test Loss 1.938 | Test Error 51.08
+Epoch  20 | Time    98 | Train Loss 2.4877 | Test Loss 2.013 | Test Error 52.90
+Epoch  21 | Time    98 | Train Loss 2.5016 | Test Loss 2.140 | Test Error 57.39
+Epoch  22 | Time    97 | Train Loss 2.4951 | Test Loss 2.003 | Test Error 52.37
+Epoch  23 | Time    96 | Train Loss 2.4209 | Test Loss 2.071 | Test Error 54.06
+Epoch  24 | Time    98 | Train Loss 2.4566 | Test Loss 2.118 | Test Error 56.53
+Epoch  25 | Time    96 | Train Loss 2.4621 | Test Loss 2.035 | Test Error 52.95
+Epoch  26 | Time    96 | Train Loss 2.3974 | Test Loss 1.905 | Test Error 50.07
+Epoch  27 | Time    96 | Train Loss 2.3839 | Test Loss 1.991 | Test Error 53.49
+Epoch  28 | Time    97 | Train Loss 2.3629 | Test Loss 1.948 | Test Error 51.96
+Epoch  29 | Time    98 | Train Loss 2.3479 | Test Loss 1.956 | Test Error 52.50
+Epoch  30 | Time    95 | Train Loss 2.3845 | Test Loss 2.077 | Test Error 55.23
+Epoch  31 | Time    98 | Train Loss 2.3507 | Test Loss 1.980 | Test Error 52.47
+Epoch  32 | Time    95 | Train Loss 2.3671 | Test Loss 1.970 | Test Error 52.92
+Epoch  33 | Time    98 | Train Loss 2.3075 | Test Loss 1.868 | Test Error 49.57
+Epoch  34 | Time    99 | Train Loss 2.3130 | Test Loss 1.890 | Test Error 50.14
+Epoch  35 | Time    98 | Train Loss 2.3810 | Test Loss 1.937 | Test Error 51.66
+Epoch  36 | Time    97 | Train Loss 2.3643 | Test Loss 1.941 | Test Error 51.02
+Epoch  37 | Time    98 | Train Loss 2.2710 | Test Loss 1.957 | Test Error 53.00
+Epoch  38 | Time    96 | Train Loss 2.3061 | Test Loss 1.862 | Test Error 48.77
+Epoch  39 | Time    97 | Train Loss 2.3069 | Test Loss 1.950 | Test Error 51.58
+Epoch  40 | Time    98 | Train Loss 2.2504 | Test Loss 1.828 | Test Error 48.58
+Epoch  41 | Time    98 | Train Loss 2.2964 | Test Loss 1.803 | Test Error 47.67
+Epoch  42 | Time    99 | Train Loss 2.2059 | Test Loss 1.820 | Test Error 48.97
+Epoch  43 | Time    98 | Train Loss 2.2548 | Test Loss 1.766 | Test Error 46.83
+Epoch  44 | Time    99 | Train Loss 2.2571 | Test Loss 1.805 | Test Error 47.55
+Epoch  45 | Time    98 | Train Loss 2.2371 | Test Loss 1.751 | Test Error 47.47
+Epoch  46 | Time    96 | Train Loss 2.1688 | Test Loss 1.742 | Test Error 46.38
+Epoch  47 | Time    98 | Train Loss 2.2005 | Test Loss 1.838 | Test Error 49.89
+Epoch  48 | Time    99 | Train Loss 2.1991 | Test Loss 1.782 | Test Error 47.53
+Epoch  49 | Time    96 | Train Loss 2.2367 | Test Loss 1.846 | Test Error 48.74
+Epoch  50 | Time    98 | Train Loss 2.2206 | Test Loss 1.758 | Test Error 46.92
+Epoch  51 | Time    96 | Train Loss 2.1534 | Test Loss 1.776 | Test Error 47.77
+Epoch  52 | Time    98 | Train Loss 2.1325 | Test Loss 1.635 | Test Error 44.29
+Epoch  53 | Time    98 | Train Loss 2.2496 | Test Loss 1.706 | Test Error 46.41
+Epoch  54 | Time    98 | Train Loss 2.1463 | Test Loss 1.743 | Test Error 47.93
+Epoch  55 | Time    98 | Train Loss 2.1580 | Test Loss 1.713 | Test Error 46.66
+Epoch  56 | Time    96 | Train Loss 2.1347 | Test Loss 1.833 | Test Error 49.96
+Epoch  57 | Time    98 | Train Loss 2.0919 | Test Loss 1.668 | Test Error 45.69
+Epoch  58 | Time    96 | Train Loss 2.1058 | Test Loss 1.613 | Test Error 42.97
+Epoch  59 | Time    98 | Train Loss 2.1299 | Test Loss 1.650 | Test Error 43.30
+Epoch  60 | Time    96 | Train Loss 2.1063 | Test Loss 1.636 | Test Error 44.46
+Epoch  61 | Time    96 | Train Loss 2.0531 | Test Loss 1.564 | Test Error 41.70
+Epoch  62 | Time    97 | Train Loss 2.0127 | Test Loss 1.583 | Test Error 43.56
+Epoch  63 | Time    98 | Train Loss 2.1648 | Test Loss 1.586 | Test Error 42.95
+Epoch  64 | Time    99 | Train Loss 2.1001 | Test Loss 1.646 | Test Error 44.21
+Epoch  65 | Time    96 | Train Loss 2.0115 | Test Loss 1.553 | Test Error 42.20
+Epoch  66 | Time    98 | Train Loss 2.0488 | Test Loss 1.581 | Test Error 42.85
+Epoch  67 | Time    97 | Train Loss 2.0352 | Test Loss 1.502 | Test Error 40.55
+Epoch  68 | Time    97 | Train Loss 2.0053 | Test Loss 1.536 | Test Error 41.71
+Epoch  69 | Time    98 | Train Loss 2.0069 | Test Loss 1.508 | Test Error 41.02
+Epoch  70 | Time    97 | Train Loss 1.9757 | Test Loss 1.484 | Test Error 40.26
+Epoch  71 | Time    96 | Train Loss 1.9770 | Test Loss 1.492 | Test Error 40.25
+Epoch  72 | Time    98 | Train Loss 1.9208 | Test Loss 1.479 | Test Error 40.60
+Epoch  73 | Time    97 | Train Loss 1.9063 | Test Loss 1.503 | Test Error 40.40
+Epoch  74 | Time    97 | Train Loss 1.9153 | Test Loss 1.433 | Test Error 39.65
+Epoch  75 | Time    98 | Train Loss 1.9402 | Test Loss 1.367 | Test Error 37.29
+Epoch  76 | Time    96 | Train Loss 1.8972 | Test Loss 1.382 | Test Error 38.22
+Epoch  77 | Time    98 | Train Loss 1.8819 | Test Loss 1.389 | Test Error 37.97
+Epoch  78 | Time    98 | Train Loss 1.8406 | Test Loss 1.358 | Test Error 36.92
+Epoch  79 | Time    99 | Train Loss 1.8144 | Test Loss 1.347 | Test Error 36.68
+Epoch  80 | Time    96 | Train Loss 1.8582 | Test Loss 1.357 | Test Error 37.09
+Epoch  81 | Time    96 | Train Loss 1.8245 | Test Loss 1.347 | Test Error 37.09
+Epoch  82 | Time    97 | Train Loss 1.8500 | Test Loss 1.340 | Test Error 36.39
+Epoch  83 | Time    96 | Train Loss 1.7423 | Test Loss 1.299 | Test Error 35.74
+Epoch  84 | Time    97 | Train Loss 1.7232 | Test Loss 1.277 | Test Error 35.21
+Epoch  85 | Time    98 | Train Loss 1.7677 | Test Loss 1.267 | Test Error 34.38
+Epoch  86 | Time    98 | Train Loss 1.7358 | Test Loss 1.279 | Test Error 35.13
+Epoch  87 | Time    96 | Train Loss 1.6975 | Test Loss 1.266 | Test Error 34.40
+Epoch  88 | Time    97 | Train Loss 1.7176 | Test Loss 1.243 | Test Error 33.88
+Epoch  89 | Time    96 | Train Loss 1.7016 | Test Loss 1.231 | Test Error 33.76
+Epoch  90 | Time    96 | Train Loss 1.6474 | Test Loss 1.223 | Test Error 33.54
+Epoch  91 | Time    98 | Train Loss 1.6728 | Test Loss 1.217 | Test Error 33.00
+Epoch  92 | Time    98 | Train Loss 1.6593 | Test Loss 1.199 | Test Error 32.76
+Epoch  93 | Time    98 | Train Loss 1.6174 | Test Loss 1.194 | Test Error 32.47
+Epoch  94 | Time    96 | Train Loss 1.5536 | Test Loss 1.187 | Test Error 32.47
+Epoch  95 | Time    98 | Train Loss 1.6015 | Test Loss 1.186 | Test Error 32.36
+Epoch  96 | Time    96 | Train Loss 1.5757 | Test Loss 1.182 | Test Error 32.08
+Epoch  97 | Time    96 | Train Loss 1.5864 | Test Loss 1.179 | Test Error 32.09
+Epoch  98 | Time    98 | Train Loss 1.6855 | Test Loss 1.181 | Test Error 32.18
+Epoch  99 | Time    96 | Train Loss 1.5377 | Test Loss 1.182 | Test Error 32.25
+Epoch 100 | Time    98 | Train Loss 1.5853 | Test Loss 1.180 | Test Error 32.06
+Adversarial Test Error: 94.780
+
+gaussian_noise	Test Loss 1.604 | Test Error 42.942
+shot_noise	Test Loss 1.500 | Test Error 40.402
+impulse_noise	Test Loss 1.572 | Test Error 42.022
+defocus_blur	Test Loss 1.379 | Test Error 37.074
+glass_blur	Test Loss 1.914 | Test Error 49.714
+motion_blur	Test Loss 1.562 | Test Error 41.392
+zoom_blur	Test Loss 1.482 | Test Error 40.032
+snow	Test Loss 1.579 | Test Error 42.026
+frost	Test Loss 1.505 | Test Error 40.624
+fog	Test Loss 1.501 | Test Error 39.920
+brightness	Test Loss 1.314 | Test Error 35.956
+contrast	Test Loss 1.468 | Test Error 39.706
+elastic_transform	Test Loss 1.579 | Test Error 41.912
+pixelate	Test Loss 1.774 | Test Error 45.254
+jpeg_compression	Test Loss 1.668 | Test Error 44.344
+Mean C Corruption Error: 41.555
+
